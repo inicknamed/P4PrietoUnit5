@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnTarget()
     {
-        while (true) // fix ts bcs it doesnt work
+        while (isGameActive) // fix ts bcs it doesnt work
         {
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, targets.Count);
