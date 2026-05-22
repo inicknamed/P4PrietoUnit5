@@ -36,8 +36,9 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
+            Debug.Log("Spawned Target");
 
-            
+
         }
     }
 
@@ -62,10 +63,12 @@ public class GameManager : MonoBehaviour
     public void StartGame(int difficulty)
     {
         spawnRate /= difficulty;
-        StartCoroutine(SpawnTarget());
+        
         score = 0;
         UpdateScore(0);
         isGameActive = true;
         titleScreen.gameObject.SetActive(false);
+        Debug.Log("Game Started");
+        StartCoroutine(SpawnTarget());
     }
 }
