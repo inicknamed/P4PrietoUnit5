@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     private int lives;
     private bool paused;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
         {
             ChangePaused();
         }
+
     }
 
     IEnumerator SpawnTarget()
